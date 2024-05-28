@@ -5,18 +5,18 @@ public class Main {
         int limit = 1000;   // Порог пополнения для бонусного начисления
         int bonus = 1;      // бонус
         int step = 100;     // шаг начисления бонуса
-        int sum_bonus;      // Начисленный бонус
-        int end_check;      // Итоговый счёт
+        int sumBonus;      // Начисленный бонус
+        int endCheck;      // Итоговый счёт
 
         if (cash > limit) { // проверяем, превысила ли сумма пополнения порог
-            sum_bonus = cash / step * bonus;
+            sumBonus = cash / step * bonus;
         } else {
-            sum_bonus = 0;
+            sumBonus = 0;
         }
-        end_check = check + cash + sum_bonus;
+        endCheck = check + cash + sumBonus;
         System.out.println("Начальный счёт: " + check + " р.");
         System.out.println("Пополнение: " + cash + " р.");
-        System.out.println("Бонус: " + sum_bonus + " р.");
-        System.out.println("Итоговый счёт: " + end_check + " р.");
+        System.out.println("Бонус: " + sumBonus + " р.");
+        System.out.println("Итоговый счёт: " + endCheck + " р.");
     }
 }
